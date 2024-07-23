@@ -15,9 +15,9 @@ class Cafe:
         self.queue = Queue()
 
     def customer_arrival(self):
-        for i in range(20):
+        for i in range(1, 21):
             sleep(1)
-            customer = Customer(i + 1, self)
+            customer = Customer(i, self)
             print(f"{customer} пришел")
             self.serve_customer(customer)
 
@@ -29,7 +29,7 @@ class Cafe:
             customer.table = available_table
             customer.start()
         else:
-            print(f"П{customer} ожидает свободный стол. (помещение в очередь)")
+            print(f"{customer} ожидает свободный стол. (помещение в очередь)")
             self.queue.put(customer)
 
     def customer_finish(self, customer):
