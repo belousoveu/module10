@@ -14,7 +14,7 @@ if __name__ == '__main__':
     start_time = time()
     write_word(10, 'example1.txt')
     write_word(30, 'example2.txt')
-    write_word(200, ' example3.txt')
+    write_word(200, 'example3.txt')
     write_word(100, 'example4.txt')
 
     print(f'Время записи при последовательном вызове: {time() - start_time}')
