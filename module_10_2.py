@@ -15,7 +15,8 @@ class Knight(Thread):
         for i in range(100, 0, -1 * self.power):
             sleep(1)
             days += 1
-            print(f'{self.name} сражается {days} день(дня)..., осталось {i-self.power} воинов.')
+            warriors = max(i - self.power, 0)
+            print(f'{self.name} сражается {days} день(дня)..., осталось {warriors} воинов.')
         print(f'{self.name} одержал победу спустя {days} дней(дня)!')
 
 
